@@ -1,0 +1,42 @@
+# 🔹 Node.js / React
+node_modules/
+build/
+.env
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+.parcel-cache/
+coverage/
+
+# 🔹 Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+crash.log
+
+# 🔹 Docker
+*.tar
+.docker/
+Dockerfile*~
+*~
+
+# 🔹 System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 🔹 Logs / PIDs
+*.log
+*.pid
+
+# 🔹 Backupy
+*~
+*.bak
+*.tmp

@@ -1,0 +1,74 @@
+.about-section {
+    display: flex;
+    align-items: flex-end; /* Ustawienie wszystkich elementów przy dolnej krawędzi */
+    justify-content: space-between; /* Zdjęcie po lewej, tekst po prawej */
+    padding: 50px 10%;
+    background: #121212;
+    min-height: 80vh;
+    position: relative;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Styl dla tekstu */
+.about-text {
+    flex: 1;
+    color: #ffffff;
+    max-width: 50%;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Styl dla przycisku CV */
+.download-cv {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.download-cv:hover {
+    background-color: #cc0000;
+}
+
+/* Styl dla zdjęcia */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Zdjęcie przylega do lewej */
+    align-items: flex-end; /* Wyrównanie do dołu */
+    max-width: 50%;
+    height: 100%;
+}
+
+/* Styl dla obrazka */
+.about-image img {
+    position: relative;
+    margin-bottom: -50px;
+    max-width: 60%;
+    height: auto;
+    border: none;
+    align-self: flex-end; /* Wyrównanie zdjęcia do dołu */
+}

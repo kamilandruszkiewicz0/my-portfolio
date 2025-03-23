@@ -1,0 +1,28 @@
+.footer {
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.footer-icons a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #ff4444;
+}
