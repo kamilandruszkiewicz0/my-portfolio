@@ -23,67 +23,73 @@
 
 ## 🚀 Features
 
-✅ Fully responsive React portfolio  
-✅ Built with Docker multi-stage build  
-✅ Served via custom-configured Nginx container  
-✅ `.env` support for API endpoints  
-✅ `.dockerignore` & `.gitignore` tailored for production  
-✅ Ready for CI/CD deployment using GitHub Actions  
-✅ Infrastructure provisioning with Terraform (AWS)
+- ✅ Fully responsive React portfolio  
+- ✅ Built with Docker multi-stage build  
+- ✅ Served via custom-configured Nginx container  
+- ✅ `.env` support for API endpoints  
+- ✅ `.dockerignore` & `.gitignore` tailored for production  
+- ✅ Ready for CI/CD deployment using GitHub Actions  
+- ✅ Infrastructure provisioning with Terraform (AWS)
 
 ---
 
 ## 🐳 Docker
 
-### 🔧 Build the container:
+### 🔧 Build the container
 
 ```bash
 docker build -t my-portfolio -f Docker/Dockerfile .
-▶️ Run the container:
-bash
-Copy
-Edit
+```
+
+### ▶️ Run the container
+
+```bash
 docker run -d -p 80:80 my-portfolio
-🧾 Nginx Configuration
-Custom nginx.conf used to serve the React build and support client-side routing.
+```
+
+---
+
+## 🧾 Nginx Configuration
+
+Custom `nginx.conf` is used to serve the React build and support client-side routing.  
 It is copied into the container during the second stage of the Docker build.
 
-☁️ Terraform (WIP)
-You’ll find a terraform/ folder with the following modules:
+---
 
-provider.tf – AWS provider config
+## ☁️ Terraform (WIP)
 
-network.tf – VPC, Subnets, Route Tables
+You’ll find a `terraform/` folder with the following modules:
 
-compute.tf – EC2 instance config
+- `provider.tf` – AWS provider config  
+- `network.tf` – VPC, Subnets, Route Tables  
+- `compute.tf` – EC2 instance config  
+- `security.tf` – Security Groups for HTTP/HTTPS  
+- `variables.tf` – Customizable inputs  
+- `outputs.tf` – Useful output values (e.g., public IP)
 
-security.tf – Security Groups for HTTP/HTTPS
+### ▶️ Run it:
 
-variables.tf – Customizable inputs
-
-outputs.tf – Useful output values (e.g., public IP)
-
-Run it:
-
-bash
-Copy
-Edit
+```bash
 cd terraform
 terraform init
 terraform apply
-🧪 CI/CD (WIP)
+```
+
+---
+
+## 🧪 CI/CD (WIP)
+
 Plan to automate:
 
-Docker build & push
+- Docker build & push  
+- Terraform plan & apply  
+- Deployment to EC2 (via SSH or ECS)
 
-Terraform plan & apply
+---
 
-Deployment to EC2 (via SSH or ECS)
+## 📁 Folder Structure
 
-📁 Folder Structure
-java
-Copy
-Edit
+```
 my-portfolio/
 ├── Docker/
 │   ├── Dockerfile
@@ -96,27 +102,37 @@ my-portfolio/
 ├── .gitignore
 ├── package.json
 └── README.md
-🛡️ Best Practices Followed
-✅ Multi-stage Docker build
-✅ Clean .dockerignore to reduce image size
-✅ No secrets in repo (.env* ignored)
-✅ Production-ready Nginx config
-✅ GitHub-friendly .gitignore
-✅ Infrastructure as Code (IaC) with Terraform
-✅ Modular folder structure for scalability
+```
 
-📌 TODO
- Deploy to AWS EC2 with Terraform
+---
 
- Add HTTPS with Let's Encrypt
+## 🛡️ Best Practices Followed
 
- Integrate GitHub Actions CI/CD pipeline
+- ✅ Multi-stage Docker build  
+- ✅ Clean `.dockerignore` to reduce image size  
+- ✅ No secrets in repo (`.env*` ignored)  
+- ✅ Production-ready Nginx config  
+- ✅ GitHub-friendly `.gitignore`  
+- ✅ Infrastructure as Code (IaC) with Terraform  
+- ✅ Modular folder structure for scalability  
 
- Add backend API or CMS (e.g., Strapi)
+---
 
-📜 License
+## 📌 TODO
+
+- [ ] Deploy to AWS EC2 with Terraform  
+- [ ] Add HTTPS with Let's Encrypt  
+- [ ] Integrate GitHub Actions CI/CD pipeline  
+- [ ] Add backend API or CMS (e.g., Strapi)
+
+---
+
+## 📜 License
+
 MIT License – feel free to use and customize ✌️
 
-💬 Feedback / Contributions
-Feel free to open an issue or submit a PR 💡
+---
 
+## 💬 Feedback / Contributions
+
+Feel free to open an issue or submit a PR 💡
